@@ -5,7 +5,7 @@ import {
   names,
   Tree
 } from '@nrwl/devkit'
-import * as generateStrapi from 'strapi-generate-new'
+import { generateNewApp } from '@strapi/generate-new'
 
 import { StrapiGeneratorSchema } from './schema'
 
@@ -58,7 +58,7 @@ export default async function (host: Tree, options: StrapiGeneratorSchema) {
     tags: normalizedOptions.parsedTags
   })
 
-  await generateStrapi(
+  await generateNewApp(
     normalizedOptions.projectRoot,
     {
       quickstart: true,
